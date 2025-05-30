@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Gafsa | Animalerie Premium en Tunisie</title>
+    <meta name="description" content="PetShop Gafsa - Votre animalerie de confiance à Gafsa. Produits premium pour chiens, chats et animaux de compagnie. Livraison dans toute la Tunisie.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables CSS pour le thème beige et blanc */
+        :root {
+            /* Palette de couleurs beige et blanc */
+            --primary-beige: #D4B896;
+            --secondary-beige: #E8D5B7;
+            --light-beige: #F5F0E8;
+            --dark-beige: #B8956A;
+            --accent-beige: #C9A876;
+            
+            --pure-white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --cream-white: #FAF8F5;
+            
+            --text-dark: #2C2C2C;
+            --text-medium: #5A5A5A;
+            --text-light: #8A8A8A;
+            --text-muted: #B5B5B5;
+            
+            /* Couleurs d'accent */
+            --success: #7FB069;
+            --warning: #F4A261;
+            --error: #E76F51;
+            --info: #2A9D8F;
+            
+            /* Ombres élégantes */
+            --shadow-sm: 0 2px 4px rgba(212, 184, 150, 0.1);
+            --shadow-md: 0 4px 12px rgba(212, 184, 150, 0.15);
+            --shadow-lg: 0 8px 24px rgba(212, 184, 150, 0.2);
+            --shadow-xl: 0 16px 32px rgba(212, 184, 150, 0.25);
+            
+            /* Transitions fluides */
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Rayons de bordure */
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Espacements */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+        }
+
+        /* Reset et base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--pure-white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        /* Typographie élégante */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: var(--space-md);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-normal);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Boutons élégants */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: var(--space-lg) var(--space-2xl);
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-normal);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            min-width: 150px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-beige);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--pure-white);
+            color: var(--primary-beige);
+            border: 2px solid var(--primary-beige);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-dark);
+            border: 2px solid var(--secondary-beige);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-beige);
+            color: var(--text-dark);
+        }
+
+        /* Header moderne */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--secondary-beige);
+            transition: var(--transition-normal);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-lg) 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-beige);
+            transition: var(--transition-normal);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary-beige);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+            position: relative;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            transition: var(--transition-normal);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-beige);
+            transition: var(--transition-normal);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-beige);
+            background: var(--light-beige);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+
+        .cart-btn {
+            position: relative;
+            background: var(--light-beige);
+            color: var(--primary-beige);
+            padding: var(--space-md);
+            border-radius: var(--radius-full);
+            transition: var(--transition-normal);
+        }
+
+        .cart-btn:hover {
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--error);
+            color: var(--pure-white);
+            border-radius: var(--radius-full);
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* Section Hero élégante */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--cream-white) 0%, var(--light-beige) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4B896' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            padding: var(--space-3xl) 0;
+        }
+
+        .hero-text {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-subtitle {
+            display: inline-block;
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+            color: var(--text-dark);
+        }
+
+        .hero-title .highlight {
+            color: var(--primary-beige);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-2xl);
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: slideInRight 1s ease-out;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition-slow);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.02) rotate(1deg);
+        }
+
+        /* Section des services */
+        .services {
+            padding: var(--space-3xl) 0;
+            background: var(--pure-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .service-card {
+            background: var(--cream-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            text-align: center;
+            transition: var(--transition-normal);
+            border: 1px solid var(--secondary-beige);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-beige), var(--accent-beige));
+            transform: scaleX(0);
+            transition: var(--transition-normal);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            background: var(--pure-white);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-beige);
+            margin-bottom: var(--space-lg);
+            transition: var(--transition-normal);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            color: var(--dark-beige);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .service-description {
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* Section en-tête */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            background: var(--secondary-beige);
+            color: var(--text-dark);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: var(--space-lg);
+            color: var(--text-dark);
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Section des produits */
+        .products {
+            padding: var(--space-3xl) 0;
+            background: var(--light-beige);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .product-card {
+            background: var(--pure-white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+            border: 1px solid var(--secondary-beige);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background: var(--cream-white);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: var(--space-md);
+            left: var(--space-md);
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .product-info {
+            padding: var(--space-xl);
+        }
+
+        .product-category {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .current-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-beige);
+        }
+
+        .original-price {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .add-to-cart {
+            flex: 1;
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            border: none;
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+
+        .add-to-cart:hover {
+            background: var(--dark-beige);
+            transform: translateY(-2px);
+        }
+
+        .wishlist-btn {
+            background: var(--cream-white);
+            color: var(--primary-beige);
+            border: 1px solid var(--secondary-beige);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+
+        .wishlist-btn:hover {
+            background: var(--primary-beige);
+            color: var(--pure-white);
+        }
+
+        /* Section À propos */
+        .about {
+            padding: var(--space-3xl) 0;
+            background: var(--pure-white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: var(--space-lg);
+        }
+
+        .about-text p {
+            margin-bottom: var(--space-lg);
+        }
+
+        .about-features {
+            list-style: none;
+            margin-bottom: var(--space-xl);
+        }
+
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+            color: var(--text-medium);
+        }
+
+        .about-features i {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Section Contact */
+        .contact {
+            padding: var(--space-3xl) 0;
+            background: var(--light-beige);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+        }
+
+        .contact-info {
+            background: var(--pure-white);
+            padding: var(--space-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            padding: var(--space-lg);
+            background: var(--cream-white);
+            border-radius: var(--radius-md);
+            transition: var(--transition-normal);
+        }
+
+        .contact-item:hover {
+            background: var(--secondary-beige);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-details h4 {
+            margin-bottom: var(--space-xs);
+            color: var(--text-dark);
+        }
+
+        .contact-details p {
+            margin: 0;
+            color: var(--text-medium);
+        }
+
+        .contact-form {
+            background: var(--pure-white);
+            padding: var(--space-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-sm);
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-md);
+            border: 2px solid var(--secondary-beige);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            transition: var(--transition-normal);
+            background: var(--cream-white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-beige);
+            background: var(--pure-white);
+            box-shadow: 0 0 0 3px rgba(212, 184, 150, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer élégant */
+        .footer {
+            background: var(--text-dark);
+            color: var(--pure-white);
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .footer-section h3 {
+            color: var(--primary-beige);
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition-normal);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-beige);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .social-link {
+            background: var(--primary-beige);
+            color: var(--pure-white);
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-normal);
+        }
+
+        .social-link:hover {
+            background: var(--accent-beige);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-xl);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Design responsive */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-xl);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-lg);
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .products-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Utilitaires */
+        .text-center { text-align: center; }
+        .mb-0 { margin-bottom: 0; }
+        .mb-1 { margin-bottom: var(--space-sm); }
+        .mb-2 { margin-bottom: var(--space-md); }
+        .mb-3 { margin-bottom: var(--space-lg); }
+        .mb-4 { margin-bottom: var(--space-xl); }
+
+        /* Effets de survol pour les cartes */
+        .hover-lift {
+            transition: var(--transition-normal);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-paw logo-icon"></i>
+                    PetShop Gafsa
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#produits" class="nav-link">Produits</a></li>
+                        <li><a href="#apropos" class="nav-link">À propos</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="#" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                    <a href="#contact" class="btn btn-primary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">Animalerie Premium à Gafsa</div>
+                    <h1 class="hero-title">
+                        Tout pour le <span class="highlight">bonheur</span> de vos animaux de compagnie
+                    </h1>
+                    <p class="hero-description">
+                        Découvrez notre large gamme de produits de qualité pour chiens, chats et autres animaux de compagnie. 
+                        Située au cœur de Gafsa, nous offrons les meilleurs soins et produits pour vos compagnons fidèles.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#produits" class="btn btn-primary">
+                            <i class="fas fa-shopping-bag"></i>
+                            Voir nos produits
+                        </a>
+                        <a href="#services" class="btn btn-secondary">
+                            <i class="fas fa-heart"></i>
+                            Nos services
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/placeholder.svg?height=500&width=600" alt="Animaux heureux - PetShop Gafsa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Nos Services</div>
+                <h2 class="section-title">Des services complets pour vos animaux</h2>
+                <p class="section-description">
+                    Nous offrons une gamme complète de services professionnels pour assurer le bien-être et la santé de vos animaux de compagnie.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="service-title">Toilettage Professionnel</h3>
+                    <p class="service-description">
+                        Services de toilettage complets avec des produits de qualité premium pour garder vos animaux propres et beaux.
+                    </p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="service-title">Soins Vétérinaires</h3>
+                    <p class="service-description">
+                        Consultations vétérinaires, vaccinations et soins préventifs pour maintenir vos animaux en bonne santé.
+                    </p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="service-title">Pension & Garde</h3>
+                    <p class="service-description">
+                        Services de garde et pension dans un environnement sûr et confortable pendant vos absences.
+                    </p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="service-title">Livraison à Domicile</h3>
+                    <p class="service-description">
+                        Livraison gratuite dans Gafsa et ses environs pour tous vos achats de produits animaliers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section class="products" id="produits">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Nos Produits</div>
+                <h2 class="section-title">Produits de qualité premium</h2>
+                <p class="section-description">
+                    Découvrez notre sélection de produits haut de gamme pour tous types d'animaux de compagnie.
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card hover-lift">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Croquettes Premium pour Chiens">
+                        <div class="product-badge">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Alimentation Chiens</div>
+                        <h3 class="product-title">Croquettes Premium Royal Canin</h3>
+                        <div class="product-price">
+                            <span class="current-price">85 DT</span>
+                            <span class="original-price">95 DT</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                                Ajouter au panier
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card hover-lift">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Jouets pour Chats">
+                        <div class="product-badge">Nouveau</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Jouets Chats</div>
+                        <h3 class="product-title">Set de Jouets Interactifs</h3>
+                        <div class="product-price">
+                            <span class="current-price">35 DT</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                                Ajouter au panier
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card hover-lift">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Accessoires pour Chiens">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Accessoires</div>
+                        <h3 class="product-title">Collier et Laisse Premium</h3>
+                        <div class="product-price">
+                            <span class="current-price">45 DT</span>
+                            <span class="original-price">55 DT</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                                Ajouter au panier
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card hover-lift">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Litière pour Chats">
+                        <div class="product-badge">Promo</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Hygiène Chats</div>
+                        <h3 class="product-title">Litière Agglomérante 10kg</h3>
+                        <div class="product-price">
+                            <span class="current-price">25 DT</span>
+                            <span class="original-price">35 DT</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                                Ajouter au panier
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about" id="apropos">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-subtitle">À propos de nous</div>
+                    <h2>PetShop Gafsa, votre partenaire de confiance</h2>
+                    <p>
+                        Depuis plus de 10 ans, PetShop Gafsa est l'animalerie de référence dans la région. 
+                        Nous nous engageons à fournir les meilleurs produits et services pour le bien-être de vos animaux de compagnie.
+                    </p>
+                    <p>
+                        Notre équipe de professionnels passionnés vous accompagne dans le choix des produits les plus adaptés 
+                        aux besoins spécifiques de vos compagnons à quatre pattes.
+                    </p>
+                    
+                    <ul class="about-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Plus de 1000 produits en stock
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Équipe de vétérinaires qualifiés
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Livraison gratuite dans Gafsa
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Conseils personnalisés gratuits
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Nous contacter
+                    </a>
+                </div>
+                
+                <div class="about-image">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Équipe PetShop Gafsa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Contact</div>
+                <h2 class="section-title">Visitez-nous à Gafsa</h2>
+                <p class="section-description">
+                    Notre équipe est à votre disposition pour vous conseiller et répondre à toutes vos questions.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>Avenue Habib Bourguiba, Gafsa 2100, Tunisie</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+216 76 123 456</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@petshop-gafsa.tn</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horaires d'ouverture</h4>
+                            <p>Lun-Sam: 8h-19h<br>Dimanche: 9h-17h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envoyez-nous un message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Décrivez vos besoins ou posez votre question..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PetShop Gafsa</h3>
+                    <p>
+                        Votre animalerie de confiance à Gafsa. Nous nous engageons à fournir les meilleurs produits 
+                        et services pour le bonheur et la santé de vos animaux de compagnie.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#produits">Produits</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Catégories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Chiens</a></li>
+                        <li><a href="#">Chats</a></li>
+                        <li><a href="#">Oiseaux</a></li>
+                        <li><a href="#">Poissons</a></li>
+                        <li><a href="#">Accessoires</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Toilettage</a></li>
+                        <li><a href="#">Soins vétérinaires</a></li>
+                        <li><a href="#">Pension</a></li>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Conseils</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetShop Gafsa. Tous droits réservés. | Conçu avec ❤️ pour les amoureux des animaux</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Effet de scroll pour le header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Navigation fluide
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer les éléments à animer
+        document.querySelectorAll('.fade-in-up, .service-card, .product-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Gestion du formulaire de contact
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulation d'envoi
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+                submitBtn.style.background = 'var(--success)';
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                    this.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Gestion du panier
+        let cartCount = 3;
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                cartCount++;
+                document.querySelector('.cart-count').textContent = cartCount;
+                
+                // Animation du bouton
+                this.innerHTML = '<i class="fas fa-check"></i> Ajouté !';
+                this.style.background = 'var(--success)';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-cart-plus"></i> Ajouter au panier';
+                    this.style.background = '';
+                }, 1500);
+            });
+        });
+
+        // Gestion des favoris
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fas')) {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    this.style.color = '';
+                } else {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    this.style.color = 'var(--error)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

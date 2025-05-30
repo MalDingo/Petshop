@@ -15,6 +15,7 @@
     <meta property="og:title" content="PetShop Gafsa | Animalerie Premium en Tunisie">
     <meta property="og:description" content="Votre animalerie de confiance à Gafsa avec des produits premium et services professionnels">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petshop-gafsa.github.io">
     <meta property="og:image" content="/assets/images/og-image.jpg">
     
     <!-- Twitter Card Meta Tags -->
@@ -846,10 +847,1551 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-        .product-category {
+            margin-bottom: var(--space-2);
+        }
+
+        .product-title {
+            font-size: var(--text-xl);
+            font-weight: 600;
+            color: var(--neutral-900);
+            margin-bottom: var(--space-3);
+            line-height: 1.3;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+        }
+
+        .stars {
+            display: flex;
+            gap: var(--space-1);
+        }
+
+        .star {
+            color: var(--warning);
+            font-size: var(--text-sm);
+        }
+
+        .rating-count {
             color: var(--neutral-500);
             font-size: var(--text-sm);
-            font-weight: 500;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-6);
+        }
+
+        .current-price {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--primary-600);
+        }
+
+        .original-price {
+            font-size: var(--text-lg);
+            color: var(--neutral-400);
+            text-decoration: line-through;
+        }
+
+        .discount {
+            padding: var(--space-1) var(--space-2);
+            background: var(--error);
+            color: var(--neutral-0);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            border-radius: var(--radius-base);
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--primary-100);
+            color: var(--primary-700);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            letter-spacing: 0.05em;
+        }
+
+        .section-title {
+            font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+            font-weight: 700;
+            margin-bottom: var(--space-6);
+            background: linear-gradient(135deg, var(--neutral-900) 0%, var(--primary-600) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-description {
+            font-size: var(--text-lg);
+            color: var(--neutral-600);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            padding: var(--space-24) 0;
+            background: var(--neutral-0);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .testimonial-card {
+            position: relative;
+            padding: var(--space-8);
+            background: var(--gradient-card);
+            border: 1px solid var(--neutral-200);
+            border-radius: var(--radius-2xl);
+            transition: var(--transition-base);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .testimonial-quote {
+            font-size: var(--text-5xl);
+            color: var(--primary-300);
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-6);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            font-size: var(--text-lg);
+            color: var(--neutral-700);
+            line-height: 1.8;
+            margin-bottom: var(--space-6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            border: 3px solid var(--primary-200);
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--neutral-900);
+            margin-bottom: var(--space-1);
+        }
+
+        .author-info p {
+            font-size: var(--text-sm);
+            color: var(--neutral-500);
+            margin: 0;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            padding: var(--space-24) 0;
+            background: var(--primary-50);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+        }
+
+        .contact-info {
+            background: var(--neutral-0);
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-4);
+            padding: var(--space-6);
+            background: var(--primary-50);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--space-6);
+            transition: var(--transition-base);
+        }
+
+        .contact-item:hover {
+            background: var(--primary-100);
+            transform: translateX(8px);
+        }
+
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: var(--neutral-0);
+            border-radius: var(--radius-xl);
+            font-size: var(--text-xl);
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--neutral-900);
+            margin-bottom: var(--space-1);
+        }
+
+        .contact-details p {
+            color: var(--neutral-600);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ===== MODERN FORM STYLES ===== */
+        .form {
+            background: var(--neutral-0);
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-6);
+        }
+
+        .form-label {
+            display: block;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--neutral-800);
+            margin-bottom: var(--space-2);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: var(--space-4);
+            border: 2px solid var(--neutral-200);
+            border-radius: var(--radius-xl);
+            font-size: var(--text-base);
+            font-family: var(--font-primary);
+            background: var(--neutral-50);
+            transition: var(--transition-base);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-400);
+            background: var(--neutral-0);
+            box-shadow: 0 0 0 4px rgba(212, 184, 150, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--neutral-900);
+            color: var(--neutral-300);
+            padding: var(--space-24) 0 var(--space-8);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-12);
+            margin-bottom: var(--space-16);
+        }
+
+        .footer-section h3 {
+            color: var(--neutral-0);
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-section p {
+            color: var(--neutral-400);
+            line-height: 1.7;
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-3);
+        }
+
+        .footer-links a {
+            color: var(--neutral-400);
+            transition: var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-400);
+            transform: translateX(4px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-4);
+            margin-top: var(--space-6);
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: var(--neutral-800);
+            color: var(--neutral-400);
+            border-radius: var(--radius-full);
+            transition: var(--transition-base);
+        }
+
+        .social-link:hover {
+            background: var(--primary-500);
+            color: var(--neutral-0);
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--neutral-800);
+            padding-top: var(--space-8);
+            text-align: center;
+            color: var(--neutral-500);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(1deg); }
+            66% { transform: translateY(10px) rotate(-1deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: var(--transition-slow);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-12);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-8);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .services-grid,
+            .products-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-3);
+            }
+            
+            .hero-title {
+                font-size: var(--text-4xl);
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* ===== DARK MODE SUPPORT ===== */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --neutral-0: #1A1A1A;
+                --neutral-50: #2C2C2C;
+                --neutral-100: #3A3A3A;
+                --neutral-800: #E5E5E5;
+                --neutral-900: #FFFFFF;
+            }
+        }
+
+        /* ===== PERFORMANCE OPTIMIZATIONS ===== */
+        .will-change-transform {
+            will-change: transform;
+        }
+
+        .will-change-opacity {
+            will-change: opacity;
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .header,
+            .footer,
+            .btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Glassmorphism -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-paw logo-icon"></i>
+                    <span>PetShop Gafsa</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#produits" class="nav-link">Produits</a></li>
+                        <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="search-btn" aria-label="Rechercher">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    
+                    <button class="cart-btn" aria-label="Panier">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </button>
+                    
+                    <button class="theme-toggle" aria-label="Changer le thème">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Contact
+                    </a>
+                    
+                    <button class="mobile-menu-btn" aria-label="Menu mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <!-- Mobile menu content will be added via JavaScript -->
+    </div>
+
+    <!-- Hero Section with Advanced Animations -->
+    <section class="hero" id="accueil">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        Animalerie Premium à Gafsa
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        L'univers du <br>
+                        <span style="color: var(--primary-600);">bonheur</span> animal
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Découvrez notre sélection premium de produits et services pour vos compagnons à quatre pattes. 
+                        Située au cœur de Gafsa, nous offrons une expérience unique alliant qualité, expertise et passion.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#produits" class="btn btn-primary btn-lg">
+                            <i class="fas fa-shopping-bag"></i>
+                            Explorer nos produits
+                        </a>
+                        <a href="#services" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-heart"></i>
+                            Nos services
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="/placeholder.svg?height=600&width=700" alt="Animaux heureux - PetShop Gafsa" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services scroll-reveal" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-award"></i>
+                    Nos Services Premium
+                </div>
+                <h2 class="section-title">Excellence & Expertise</h2>
+                <p class="section-description">
+                    Une gamme complète de services professionnels pour assurer le bien-être, 
+                    la santé et le bonheur de vos animaux de compagnie.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Toilettage Professionnel</h3>
+                    <p>
+                        Services de toilettage haut de gamme avec des produits premium et des techniques modernes 
+                        pour sublimer la beauté naturelle de vos compagnons.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Soins Vétérinaires</h3>
+                    <p>
+                        Consultations, vaccinations, soins préventifs et urgences avec notre équipe 
+                        de vétérinaires qualifiés et expérimentés.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Pension & Garde</h3>
+                    <p>
+                        Services de garde et pension dans un environnement sécurisé et confortable, 
+                        avec surveillance 24h/24 et activités adaptées.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Livraison Express</h3>
+                    <p>
+                        Livraison gratuite et rapide dans Gafsa et ses environs, avec service express 
+                        disponible pour vos commandes urgentes.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Formation & Dressage</h3>
+                    <p>
+                        Programmes de dressage personnalisés et cours d'éducation canine 
+                        avec nos experts comportementalistes.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Conseil Expert</h3>
+                    <p>
+                        Conseils personnalisés gratuits pour l'alimentation, les soins et le bien-être 
+                        de vos animaux par nos spécialistes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products scroll-reveal" id="produits">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-gem"></i>
+                    Produits Premium
+                </div>
+                <h2 class="section-title">Sélection d'Excellence</h2>
+                <p class="section-description">
+                    Découvrez notre gamme soigneusement sélectionnée de produits haut de gamme 
+                    pour tous types d'animaux de compagnie.
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=280&width=320" alt="Croquettes Premium Royal Canin" loading="lazy">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn" aria-label="Ajouter aux favoris">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Aperçu rapide">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Comparer">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Alimentation Chiens</div>
+                        <h3 class="product-title">Croquettes Premium Royal Canin Adult</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                            <span class="rating-count">(127 avis)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">89 DT</span>
+                            <span class="original-price">105 DT</span>
+                            <span class="discount">-15%</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-cart-plus"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=280&width=320" alt="Jouets Interactifs pour Chats" loading="lazy">
+                        <div class="product-badge">Nouveau</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn" aria-label="Ajouter aux favoris">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Aperçu rapide">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Comparer">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Jouets Chats</div>
+                        <h3 class="product-title">Set de Jouets Interactifs Premium</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="far fa-star star"></i>
+                            </div>
+                            <span class="rating-count">(89 avis)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">45 DT</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-cart-plus"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=280&width=320" alt="Collier et Laisse Premium" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action-btn" aria-label="Ajouter aux favoris">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Aperçu rapide">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Comparer">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Accessoires</div>
+                        <h3 class="product-title">Collier et Laisse Cuir Premium</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                            <span class="rating-count">(156 avis)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">65 DT</span>
+                            <span class="original-price">80 DT</span>
+                            <span class="discount">-19%</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-cart-plus"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=280&width=320" alt="Litière Premium pour Chats" loading="lazy">
+                        <div class="product-badge">Promo</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn" aria-label="Ajouter aux favoris">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Aperçu rapide">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Comparer">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Hygiène Chats</div>
+                        <h3 class="product-title">Litière Agglomérante Premium 15kg</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="far fa-star star"></i>
+                            </div>
+                            <span class="rating-count">(203 avis)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">32 DT</span>
+                            <span class="original-price">45 DT</span>
+                            <span class="discount">-29%</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-cart-plus"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=280&width=320" alt="Aquarium Premium" loading="lazy">
+                        <div class="product-badge">Exclusif</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn" aria-label="Ajouter aux favoris">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Aperçu rapide">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Comparer">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Aquariophilie</div>
+                        <h3 class="product-title">Aquarium LED Premium 100L</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                            </div>
+                            <span class="rating-count">(67 avis)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">280 DT</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-cart-plus"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=280&width=320" alt="Cage Transport Premium" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action-btn" aria-label="Ajouter aux favoris">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Aperçu rapide">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-action-btn" aria-label="Comparer">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Transport</div>
+                        <h3 class="product-title">Cage de Transport Deluxe</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="fas fa-star star"></i>
+                                <i class="far fa-star star"></i>
+                            </div>
+                            <span class="rating-count">(94 avis)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">120 DT</span>
+                            <span class="original-price">140 DT</span>
+                            <span class="discount">-14%</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-cart-plus"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: var(--space-12);">
+                <a href="#" class="btn btn-outline btn-lg">
+                    <i class="fas fa-th-large"></i>
+                    Voir tous les produits
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials scroll-reveal" id="temoignages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-users"></i>
+                    Témoignages Clients
+                </div>
+                <h2 class="section-title">Ils nous font confiance</h2>
+                <p class="section-description">
+                    Découvrez les expériences exceptionnelles de nos clients et leurs compagnons 
+                    qui ont trouvé bonheur et satisfaction chez PetShop Gafsa.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-content">
+                        "PetShop Gafsa a transformé la vie de mon Golden Retriever ! La qualité des produits est exceptionnelle 
+                        et l'équipe est d'une expertise remarquable. Le service de toilettage est tout simplement parfait. 
+                        Je recommande vivement !"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Sarah Ben Ahmed" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Ben Ahmed</h4>
+                            <p>Propriétaire de Golden Retriever</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-content">
+                        "Après avoir testé plusieurs animaleries, j'ai enfin trouvé LA référence à Gafsa. 
+                        Les conseils personnalisés, la livraison rapide et la passion de l'équipe font toute la différence. 
+                        Mes trois chats sont aux anges !"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Mohamed Trabelsi" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mohamed Trabelsi</h4>
+                            <p>Passionné de félins</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-content">
+                        "Le service vétérinaire de PetShop Gafsa a sauvé la vie de mon chat. L'expertise, la rapidité d'intervention 
+                        et l'attention portée aux animaux sont remarquables. Une équipe de vrais professionnels passionnés !"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Fatma Khelifi" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Fatma Khelifi</h4>
+                            <p>Cliente fidèle depuis 5 ans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact scroll-reveal" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Nous Contacter
+                </div>
+                <h2 class="section-title">Visitez-nous à Gafsa</h2>
+                <p class="section-description">
+                    Notre équipe d'experts est à votre disposition pour vous conseiller et répondre 
+                    à toutes vos questions sur le bien-être de vos animaux.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: var(--space-8);">Informations de contact</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Notre Adresse</h4>
+                            <p>Avenue Habib Bourguiba<br>Gafsa 2100, Tunisie<br>Face à la Poste Centrale</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+216 76 123 456<br>+216 98 765 432 (Urgences)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@petshop-gafsa.tn<br>urgences@petshop-gafsa.tn</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horaires d'ouverture</h4>
+                            <p>Lundi - Samedi: 8h00 - 19h00<br>Dimanche: 9h00 - 17h00<br>Urgences 24h/24</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="form" id="contactForm">
+                    <h3 style="margin-bottom: var(--space-6);">Envoyez-nous un message</h3>
+                    
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nom complet *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Sujet *</label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" required 
+                                  placeholder="Décrivez vos besoins ou posez votre question..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PetShop Gafsa</h3>
+                    <p>
+                        Votre animalerie de confiance depuis plus de 10 ans. Nous nous engageons à fournir 
+                        les meilleurs produits et services pour le bonheur et la santé de vos animaux de compagnie.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="#accueil"><i class="fas fa-home"></i> Accueil</a></li>
+                        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                        <li><a href="#produits"><i class="fas fa-shopping-bag"></i> Produits</a></li>
+                        <li><a href="#temoignages"><i class="fas fa-star"></i> Témoignages</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Catégories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-dog"></i> Chiens</a></li>
+                        <li><a href="#"><i class="fas fa-cat"></i> Chats</a></li>
+                        <li><a href="#"><i class="fas fa-dove"></i> Oiseaux</a></li>
+                        <li><a href="#"><i class="fas fa-fish"></i> Poissons</a></li>
+                        <li><a href="#"><i class="fas fa-carrot"></i> Rongeurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-cut"></i> Toilettage</a></li>
+                        <li><a href="#"><i class="fas fa-stethoscope"></i> Vétérinaire</a></li>
+                        <li><a href="#"><i class="fas fa-home"></i> Pension</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Livraison</a></li>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> Formation</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetShop Gafsa. Tous droits réservés. | Conçu avec ❤️ pour les amoureux des animaux | 
+                   <a href="#" style="color: var(--primary-400);">Politique de confidentialité</a> | 
+                   <a href="#" style="color: var(--primary-400);">Conditions d'utilisation</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== MODERN JAVASCRIPT WITH ES6+ FEATURES =====
+        
+        // Performance optimization
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    // Unobserve after animation to improve performance
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Initialize scroll animations
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        const handleScroll = debounce(() => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, 10);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Shopping cart functionality
+        let cartCount = 3;
+        const cartCountElement = document.querySelector('.cart-count');
+        
+        const updateCartCount = (count) => {
+            cartCount = count;
+            cartCountElement.textContent = cartCount;
+            cartCountElement.style.animation = 'pulse 0.5s ease-in-out';
+            setTimeout(() => {
+                cartCountElement.style.animation = '';
+            }, 500);
+        };
+
+        // Add to cart functionality
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            if (btn.textContent.includes('Ajouter au panier')) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Visual feedback
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Ajouté !';
+                    this.style.background = 'var(--success)';
+                    this.disabled = true;
+                    
+                    // Update cart count
+                    updateCartCount(cartCount + 1);
+                    
+                    // Reset button after 2 seconds
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.style.background = '';
+                        this.disabled = false;
+                    }, 2000);
+                });
+            }
+        });
+
+        // Wishlist functionality
+        document.querySelectorAll('.product-action-btn').forEach(btn => {
+            if (btn.querySelector('.fa-heart')) {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.style.color = 'var(--error)';
+                        this.style.background = 'rgba(239, 68, 68, 0.1)';
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.style.color = '';
+                        this.style.background = '';
+                    }
+                });
+            }
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+                submitBtn.style.background = 'var(--success)';
+                
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.innerHTML = `
+                    <div style="background: var(--success); color: white; padding: var(--space-4); 
+                                border-radius: var(--radius-lg); margin-top: var(--space-4); 
+                                text-align: center; animation: fadeInUp 0.5s ease-out;">
+                        <i class="fas fa-check-circle"></i> 
+                        Merci ! Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.
+                    </div>
+                `;
+                this.appendChild(successMessage);
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                    this.reset();
+                    successMessage.remove();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        let isDarkMode = false;
+
+        themeToggle.addEventListener('click', function() {
+            isDarkMode = !isDarkMode;
+            const icon = this.querySelector('i');
+            
+            if (isDarkMode) {
+                document.body.style.filter = 'invert(1) hue-rotate(180deg)';
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                document.body.style.filter = '';
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        // Search functionality
+        const searchBtn = document.querySelector('.search-btn');
+        searchBtn.addEventListener('click', function() {
+            // Create search overlay
+            const searchOverlay = document.createElement('div');
+            searchOverlay.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                            background: rgba(0,0,0,0.8); z-index: var(--z-modal); 
+                            display: flex; align-items: center; justify-content: center;
+                            animation: fadeIn 0.3s ease-out;">
+                    <div style="background: white; padding: var(--space-8); border-radius: var(--radius-2xl); 
+                                width: 90%; max-width: 500px; animation: slideInUp 0.3s ease-out;">
+                        <div style="display: flex; align-items: center; gap: var(--space-4); 
+                                    margin-bottom: var(--space-6);">
+                            <i class="fas fa-search" style="color: var(--primary-500); font-size: var(--text-xl);"></i>
+                            <input type="text" placeholder="Rechercher des produits..." 
+                                   style="flex: 1; border: none; outline: none; font-size: var(--text-lg);">
+                            <button onclick="this.closest('div').remove()" 
+                                    style="background: none; border: none; font-size: var(--text-xl); 
+                                           color: var(--neutral-500); cursor: pointer;">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div style="color: var(--neutral-600);">
+                            <p>Suggestions populaires:</p>
+                            <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-2);">
+                                <span style="background: var(--primary-100); color: var(--primary-700); 
+                                             padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); 
+                                             font-size: var(--text-sm); cursor: pointer;">Croquettes</span>
+                                <span style="background: var(--primary-100); color: var(--primary-700); 
+                                             padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); 
+                                             font-size: var(--text-sm); cursor: pointer;">Jouets</span>
+                                <span style="background: var(--primary-100); color: var(--primary-700); 
+                                             padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); 
+                                             font-size: var(--text-sm); cursor: pointer;">Colliers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(searchOverlay);
+            
+            // Focus on search input
+            setTimeout(() => {
+                searchOverlay.querySelector('input').focus();
+            }, 100);
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            
+            // Animate hamburger menu
+            const spans = this.querySelectorAll('span');
+            if (mobileMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans.forEach(span => {
+                    span.style.transform = '';
+                    span.style.opacity = '';
+                });
+            }
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            // Log performance metrics
+            const perfData = performance.getEntriesByType('navigation')[0];
+            console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+            
+            // Preload critical images
+            const criticalImages = [
+                '/placeholder.svg?height=600&width=700',
+                '/placeholder.svg?height=280&width=320'
+            ];
+            
+            criticalImages.forEach(src => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = src;
+                document.head.appendChild(link);
+            });
+        });
+
+        // Service Worker registration for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(err) {
+                        console.log('ServiceWorker registration failed');
+                    });
+            });
+        }
+
+        // Add loading states to all buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!this.disabled && !this.classList.contains('no-loading')) {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }
+            });
+        });
+
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Add smooth hover effects to cards
+        document.querySelectorAll('.product-card, .service-card, .testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.willChange = 'transform';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.willChange = 'auto';
+            });
+        });
+
+        console.log('🐾 PetShop Gafsa - Modern Website Loaded Successfully! 🚀');
+    </script>
+</body>
+</html>
